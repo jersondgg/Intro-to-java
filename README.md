@@ -1,2 +1,2 @@
-# Intro-to-java
+Java Fall Projects
 Finding the future day
