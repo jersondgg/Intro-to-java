@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+public class Problem42 {
+
+/**
+ * @param args the command line arguments
+ */
+public static void main(String[] args) {
+ Scanner kb = new Scanner(System.in);
+    System.out.println("Enter a : ");
+    int a = kb.nextInt();
+    
+    System.out.println(isPrime(a));
+   
+    int count =0;
+  
+    
+}
+
+
+  public static boolean isPrime(int x ){
+    int count = 0;
+      for(int i = 1; i < (x+1) ; i++)
+          
+          if (x % i == 0){
+         
+             
+              count ++;
+          }
+      
+ if (count == 2){
+     return true;
+ 
+ }
+    else {
+     return false;
+    
+    }
+    
+    
+ 
+    
+    }
+
+}
