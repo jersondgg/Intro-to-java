@@ -1,0 +1,76 @@
+/*
+*/
+package javaapplication8;
+
+/**
+ *
+ * @author jerson
+ */
+import java.util.Scanner;
+public class JavaApplication8 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner kb = new Scanner(System.in);
+        int negativeSum = 0,positiveCount =0;
+        int positiveSum = 0, negativeCount = 0,ceroCount = 0, averageN, averageP;
+        
+        
+   int[] nums = new int [5];
+        System.out.println("Enter 5 digits.");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Enter a digit: ");
+            nums[i] = kb.nextInt();
+            
+            if (nums[i] == 0) {
+                ceroCount++;
+                
+            }
+            else if(nums[i]>0){
+                positiveSum += nums[i];
+                positiveCount++;
+                      
+            
+            }
+            
+            else{
+            
+            negativeSum += nums[i];
+            negativeCount++;
+            
+            }           
+  
+            
+        }
+        
+        
+        if(positiveCount == 0){
+            System.out.println("There is any number to compute an average");
+        }
+        else{
+        
+        averageP = positiveSum/positiveCount;
+            System.out.println("The positive average is: " + averageP);
+        
+        }
+        
+      if(negativeCount == 0 ) {
+      
+          System.out.println("There are not negative numbers to compute the average");
+      
+      
+      } else{
+          
+          averageP = negativeSum / negativeCount;
+          System.out.println("The negative average is: " + averageP);
+            
+        }
+      
+        System.out.println("The number of ceros is: " + ceroCount);
+}
+        
+    }
+    
