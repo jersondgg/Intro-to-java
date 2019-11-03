@@ -1,0 +1,47 @@
+/*
+Write a Java program that prompts the user to enter a positive integer a, and 
+then a positive integer d. Assume the user enters valid input.  The program then
+outputs the quotient of a  divided by d and the remainder of  a divided by d . 
+The program then does the same thing again, and keeps doing it until the quotient
+and remainder are the same.   
+ */
+package javaapplication8;
+
+/**
+ *
+ * @author jerson
+ */
+import java.util.Scanner;
+public class JavaApplication8 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner kb = new Scanner(System.in);
+        int a,b, quot, remi;
+        
+        do {
+            System.out.print("Enter pos. integer a: ");
+            a = kb.nextInt();
+             System.out.print("Enter pos. integer b: ");
+            b = kb.nextInt();
+            
+            quot = a/b;
+            remi = a%b;
+            if(quot != remi){
+            System.out.println(" The quotient is " + quot + " and the reminder is " + remi);
+                System.out.println("");
+            }
+            else{
+            
+            System.out.println(" The quotient is " + quot + " and the reminder is " + remi + "."
+            +"\n Bye!");
+
+            }
+        } while (quot != remi);
+        
+    }
+    
+}
