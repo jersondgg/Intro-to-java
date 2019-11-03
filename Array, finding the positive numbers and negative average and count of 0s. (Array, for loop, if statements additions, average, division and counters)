@@ -22,7 +22,7 @@ public class JavaApplication8 {
    int[] nums = new int [5];
         System.out.println("Enter 5 digits.");
         for (int i = 0; i < 5; i++) {
-            System.out.print("Enter a digit: ");
+            System.out.print((i+1)+" Enter a digit: ");
             nums[i] = kb.nextInt();
             
             if (nums[i] == 0) {
