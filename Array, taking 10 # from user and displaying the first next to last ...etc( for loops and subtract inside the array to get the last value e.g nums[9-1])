@@ -1,0 +1,36 @@
+/*
+*/
+package javaapplication8;
+
+/**
+ *
+ * @author jerson
+ */
+import java.util.Scanner;
+public class JavaApplication8 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner kb = new Scanner(System.in);
+        
+   int[] nums = new int [10];
+        System.out.println("Enter 5 digits.");
+        for (int i = 0; i < 10; i++) {
+            System.out.print((i+1)+" Enter a digit: ");
+            nums[i] = kb.nextInt();
+        }
+        
+        for (int i = 0; i < 10; i++) {
+            System.out.println(nums[i]+ " ");
+            System.out.println(nums[9-i] +" ");
+            
+        }
+      
+          
+}
+        
+    }
+    
