@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication44;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author jerso
+ */
+import java.io.*; 
+  
+public class JavaApplication44 {
+
+/**
+ * @param args the command line arguments
+ */
+ public static void main(String [] args){
+     
+     System.out.println(isPalindrome("a"));                    
+ }
+
+    public static boolean isPalindrome(String x){
+        int i = x.length()-1;
+        int j=0;
+        while(i > j) {
+            if(x.charAt(i) != x.charAt(j)) {
+                return false;
+            }
+            i--;
+            j++;
+        }
+        return true;
+    }
+}
+
