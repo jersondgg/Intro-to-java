@@ -1,0 +1,76 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication44;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author jerso
+ */
+import java.io.*; 
+  
+public class JavaApplication44 {
+
+/**
+ * @param args the command line arguments
+ */
+public static void main(String[] args) {
+ Scanner kb = new Scanner(System.in);
+ 
+ 
+    System.out.println(getGrade( true, false, true, 2));
+
+
+    }
+
+public static char getGrade(boolean validURL, boolean looksLikeShape, boolean brokenImages, int font){
+    char grade;
+    int valid, look, broke, sum;
+    
+    if (validURL == true){
+    
+      valid = 4;
+    }
+    else{
+        valid = 0;
+        
+    }
+    if(looksLikeShape == true){
+        look = 2;
+    
+    }
+      else{
+        look = 0;
+        
+    }
+      if(brokenImages == true){
+        broke = 0;
+    
+    }
+      else{
+    broke = 2;
+        
+    }
+      sum = valid + look + broke + font;
+      
+      if(sum > 9)
+      grade='A';
+      
+          else if(sum == 8)
+              grade='B';
+      else if(sum == 7)
+              grade='C';
+      else if(sum == 6)
+              grade='D';
+      else 
+              grade='F';  
+    
+    return grade;
+
+     
+}
+}
