@@ -1,0 +1,38 @@
+public class Test {
+public static void main(String[] args) {
+ 
+ 
+    System.out.println(madeProgress(10, 15, true));
+
+
+    }
+
+public static boolean madeProgress(int end, int start, boolean penalty){
+    boolean flag = false ;
+    int diference=0;
+    if (penalty == true){
+    diference = start - end -10;
+    
+    }
+   else if(penalty == false){
+    
+    diference = start - end;
+    
+    }
+    
+    if (diference < 0){
+    flag = false;
+    
+    }
+    
+    else if (diference >0){
+    flag = true;
+    
+    }
+  
+    return flag;
+     
+}
+}
+
+
