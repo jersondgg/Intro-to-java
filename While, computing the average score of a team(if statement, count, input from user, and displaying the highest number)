@@ -1,0 +1,62 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication44;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author jerso
+ */
+import java.io.*; 
+  
+public class JavaApplication44 {
+
+/**
+ * @param args the command line arguments
+ */
+ public static void main(String [] args){
+     
+     Scanner kb =new Scanner(System.in);
+     double x, sum = 0, high = 0;
+     int  count = 0;
+     System.out.print("Category to calculate: ");
+     String s = kb.nextLine();
+     System.out.println("");
+     System.out.println("Enter a positive score or a negative to quit");
+     
+     do {
+         System.out.print("Enter a number #" + (count+1) + ": ");
+         x = kb.nextDouble();
+         if(x > 0) {
+          sum = sum + x;
+          count++;
+         }
+         if(x > high){
+             high = x;
+         
+         }
+         else{
+         high =high;
+         }
+   
+     } while (x > 0);
+     
+      System.out.println("Values entered: " + count);
+      System.out.println("Team high " + high);
+      double average = sum/count;
+      System.out.println("Team average is: "+average);
+      
+      }
+    
+
+
+    }
+
+
+
+
+
