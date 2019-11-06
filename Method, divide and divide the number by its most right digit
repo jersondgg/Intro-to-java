@@ -1,0 +1,59 @@
+/*
+divide the number 
+by its right-most digit and print out the result and then divide that
+result by its right-most digit until the same value is printed out three
+times consecutively (i.e. one after another). 3. If the right-most digit
+is a 0, divide the number by 2. 
+ */
+package javaapplication44;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author jerso
+ */
+import java.io.*; 
+  
+public class JavaApplication44 {
+
+/**
+ * @param args the command line arguments
+ */
+ public static void main(String [] args){
+     
+int n1 =  120;
+int  count = 0;
+
+while(count < 2){
+    int  last = 0, remi;
+    last = n1;
+    if (n1%10==0) {
+        n1= n1/2;
+        System.out.println(n1) ;  }
+    else {
+    if(n1%10!=0){
+        
+        remi = n1%10;
+        n1 /=remi; 
+        System.out.println(n1);
+    }
+    
+    }
+    
+    if (last==n1) 
+    count++;
+    
+    else {
+    count= 0;
+      last = n1;
+    
+    }
+}
+
+      }
+
+}
+
+
+
