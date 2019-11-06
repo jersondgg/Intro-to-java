@@ -1,0 +1,62 @@
+/*
+ The method should take a 1-dimensional (1D) integer array parameter
+named nums as a parameter and should not return a value.  2. The method
+should find the smallest sum possible when adding together pairs of
+integers in the 1D array nums and print out that value. 3. The method
+should also print out the pairs of integers (in order from left to right)
+in nums that, when added together, gives the smallest sum.
+ */
+package javaapplication44;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author jerso
+ */
+import java.io.*; 
+  
+public class JavaApplication44 {
+
+/**
+ * @param args the command line arguments
+ */
+ public static void main(String [] args){
+     
+        int[] n1 = {-3,-3,0,-5,10};
+        
+      smallestPairSum (n1);
+
+    }
+ 
+ //selection sort
+  public static void smallestPairSum(int [] x){
+     int min, first = 0, aux, sum=0;
+      for (int i = 0; i < x.length; i++) {
+          min = i;
+          for (int j = i+1; j < x.length; j++) {
+              if (x[j] < x[min]) {
+                  min = j; 
+              }
+             
+          }
+          
+          aux = x[i];
+          x[i] = x[min];
+          x[min]=aux;
+              
+          }
+       
+       System.out.println("");
+           for (int j = 0; j < 2; j++) {
+               sum = sum + x[j];
+                  
+      
+           }
+       
+            System.out.println("Smallest su: "+sum);
+            System.out.println("Pairs:\n"+x[0] +", " + x[1]);
+        
+      }
+
+}
