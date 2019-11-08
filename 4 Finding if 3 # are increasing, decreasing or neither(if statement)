@@ -1,0 +1,34 @@
+
+
+import java.util.Scanner;
+
+public class Test {
+  public static void main(String [] args){
+     
+     double a, b, c;
+     Scanner kb =new Scanner(System.in);
+     System.out.println("Enter the numbers: ");
+     a = kb.nextDouble();
+     System.out.println("Enter number: ");
+     b = kb.nextDouble();
+     System.out.println("Enter number; ");
+     c = kb.nextDouble();
+     
+     
+     if (a<b && b<c) {
+         System.out.println("Increasing");
+     }
+     
+     else if (a>b && b>c) {
+         System.out.println("Decreasing");
+         
+     }
+     else{
+     
+         System.out.println("Neither");
+     }
+    
+     }
+
+      }
+
