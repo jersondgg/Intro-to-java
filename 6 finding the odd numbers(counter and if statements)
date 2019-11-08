@@ -1,0 +1,61 @@
+package javaapplication44;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author jerso
+ */
+import java.io.*; 
+  
+public class JavaApplication44 {
+
+/**
+ * @param args the command line arguments
+ */
+ public static void main(String [] args){
+     
+     int a, b, c;
+     Scanner kb =new Scanner(System.in);
+     System.out.println("Enter the numbers: ");
+     a = kb.nextInt();
+     System.out.println("Enter number: ");
+     b = kb.nextInt();
+     System.out.println("Enter number: ");
+     c = kb.nextInt();
+     
+     int count = 0;
+     
+     if (a%2==1) {
+         count ++;
+         
+     }
+       if (b%2==1) {
+         count ++;
+         
+     }
+         if (c%2==1) {
+         count ++;
+         
+     }
+         if (count == 1){
+             System.out.println( "One integer is odd");
+         
+         
+         }
+         else if (count == 2) {
+              System.out.println("Two integers were odd");         
+     }
+          else if (count == 3) {
+              System.out.println("Three integers were odd");         
+     }
+         else{
+         
+             System.out.println("No integer were odd");
+         
+         }
+    
+     }
+
+      }
+
