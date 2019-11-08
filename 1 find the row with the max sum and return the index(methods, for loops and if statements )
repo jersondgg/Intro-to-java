@@ -1,0 +1,78 @@
+/*  Write the Java method below, which takes a two-dimensional array A of positive 
+integers. The method returns the index of the row that has the largest sum. Assume 
+no two rows have the same sum. For example, if A is the array below, then row 0’s 
+values sum to 21, row 1’s values sum to 19, row 2’s values sum to 23, and row 3’s 
+values sum to 20. Since row 2 has the highest sum, the method would return the 
+value 2 */
+import java.util.Scanner;
+
+public class WorkSpace{
+public static void main(String[] args)
+   {
+      int[][] x = getarrey();
+       System.out.println(indexOftheMaxSum(x));
+}
+//creating the arrey and saving the values
+public static int[][] getarrey(){
+
+ Scanner kb = new Scanner(System.in);
+       
+       int filas, colum;
+       int [][] array;
+       System.out.print("Enter the numbers o rows: ");
+       filas = kb.nextInt();
+       System.out.print("Enter the numbers of columns: ");
+       colum = kb.nextInt();
+       
+       
+    array = new int [filas][colum];
+    
+       for (int i = 0; i < filas; i++) {
+           for (int j = 0; j < colum; j++) {
+               System.out.print("Enter the matriz " + i+ " " + j + " :");
+               array [i][j] = kb.nextInt();
+
+           }
+           
+       }
+       
+       for (int j = 0; j < filas; j++) {
+               for (int k = 0; k < colum; k++) {
+                   System.out.print(array[j][k]+" ");
+
+               }
+               
+                       System.out.println("");
+           }
+    return array;
+}
+//this method find the max sum of all the rows
+
+public static int indexOftheMaxSum(int [][] array){
+    int maxsum=0, indexofmax=0, sumtotal=0;
+    //asigning maxsum a value using the first row
+    for (int colum = 0; colum < array[0].length; colum++) {
+        maxsum += array[0][colum];
+    }
+    //getting the sum of te rest of the rows and compering the values to get 
+    //the biger sum and index of the maxsum row.
+    
+    for (int row = 1; row < array.length; row++) {
+        for (int column = 0; column < array.length; column++) {
+            sumtotal += array[row][column];
+            
+            //implementing conditionals to find the biger sum of a row and saving
+            //the index
+            if (sumtotal > maxsum) {
+                maxsum=sumtotal;
+                indexofmax = row;
+                
+            }
+                    
+        }
+    }
+    //returning the value of the index that contain the row with the maxsum
+    return indexofmax;
+}
+
+} 
