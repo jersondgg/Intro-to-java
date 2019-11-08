@@ -1,0 +1,26 @@
+public class JavaApplication44 {
+
+/**
+ * @param args the command line arguments
+ */
+ public static void main(String [] args){
+     
+     int a, b, c;
+     Scanner kb =new Scanner(System.in);
+     System.out.println("Enter the numbers: ");
+     a = kb.nextInt();
+     System.out.println("Enter number: ");
+     b = kb.nextInt();
+    // System.out.println("Enter number: ");
+     //c = kb.nextInt();
+ 
+     int sum = a;
+     for (int i = 1; i <b; i++) {
+         sum *=a;
+     }
+     
+     System.out.println(sum);
+     }
+
+      }
+
