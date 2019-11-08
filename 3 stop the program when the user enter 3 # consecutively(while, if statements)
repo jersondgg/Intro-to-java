@@ -1,0 +1,30 @@
+/*  Write a Java program that prompts the user to enter integers from the 
+keyboard one at a time. The program stops reading integers once the user 
+enters the same value three times consecutively (meaning three times, one after
+the other). Once input is completed the program is to display the message "Same 
+entered 3 in a row". */
+import java.util.Scanner;
+
+public class WorkSpace{
+public static void main(String[] args){
+    Scanner kb = new Scanner(System.in);
+    int count=0, n;
+    int same = 0;
+     while(count<3){
+         System.out.print("Enter an integer: ");
+         n = kb.nextInt();
+         
+         if(n != same){
+             same=n;
+                count = 0;
+         }
+         if(n == same)
+             count++;
+    
+     }
+     
+     System.out.println("Same number entered " + count + " in a row.");
+   
+}
+
+} 
