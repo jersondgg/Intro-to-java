@@ -1,0 +1,24 @@
+/*   */
+import java.util.Scanner;
+
+public class WorkSpace{
+public static void main(String[] args){
+    Scanner kb = new Scanner(System.in);
+    System.out.print("enter a integer: ");
+    int x = kb.nextInt();
+int rem;
+    int q = x/25;
+    rem = x%25;
+    int n = rem/5;
+    rem = rem%5;
+    int p = rem/1;
+    
+    System.out.println("To make " + x + " you need: ");
+    System.out.println(q +" quaters");
+    System.out.println(n + " nickles");
+    System.out.println(p+ " pennis");
+}  
+        
+
+
+} 
